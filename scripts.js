@@ -27,8 +27,6 @@ console.log (status1Boolean)
   if  (status1Boolean ===false){  console.log (false);
   } else {console.log (true)};
   
-
-console.log (status1va)
 let root2 = document.querySelector('[data-key="order2"]');
 
 const biscuits2 = document.querySelector('[data-biscuits="5"]');
@@ -41,7 +39,13 @@ const donuts2Value = parseInt(donuts2.getAttribute("data-donuts"));
 const pancakes2 = document.querySelector('[data-pancakes="2"]');
 const pancakes2Value = parseInt(pancakes2.getAttribute("data-pancakes"));
 
-const status2 = document.querySelector(".status");
+let status2 = document.querySelector("[data-delivered]");
+const status2value = status2.getAttribute("data-delivered")
+
+const status2Boolean = status2value==="true"
+console.log (status2Boolean)
+ if (status1Boolean===false){ console.log (false)}
+ else {console.log (true)}
 
 const root3 = document.querySelector('[data-key="order3"]');
 
@@ -56,8 +60,14 @@ const pancakes3 = document.querySelector('[data-pancakes="15"]');
 const pancakes3Value=parseInt( pancakes3.getAttribute ('data-pancakes'))
 console.log (pancakes3Value)
 
-const status3 = document.querySelector(".status");
-/**element [biscuits] with a child element [count] */
+let status3 = document.querySelector("[ data-delivered]");
+const status3value = status3.getAttribute("data-delivered")
+const status3Boolean =( status3value === "true")
+console.log (status3Boolean)
+if (status3Boolean ===true ){console.log (true)}
+else {console.log(false)}
+
+/**take element [biscuits] with a child element [count] from HTML */
 let biscuits1Count = document.querySelector ('.biscuits .count');
  biscuits1Count.textContent = biscuits1value;
 console.log (biscuits1Count);
@@ -69,8 +79,15 @@ console.log(donuts1Count);
  let pancakes1Count = document.querySelector ('.pancakes  .count')
  pancakes1Count.textContent= pancakes1Value
 console.log (pancakes1Count)
+/**
+ * take the child element {dd} under parent element {.statys}
+ */
+const status1Update= document.querySelector('.status dd');
+console.log (status1Update)
 
-  status1 = root1.status ? Delivered : Pending;
+  if (status1Boolean===true) {status1Update.textContent = 'Delivered'}
+  else{status1Update.textContent='Pending' }
+//status1 = root1.status ? Delivered : Pending;
 
 let biscuits2Count = document.querySelector('.biscuits  .count')
 biscuits2Count.textContent = biscuits2Value
