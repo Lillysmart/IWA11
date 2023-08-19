@@ -62,7 +62,7 @@ console.log (pancakes3Value)
 
 let status3 = document.querySelector("[ data-delivered]");
 const status3value = status3.getAttribute("data-delivered")
-const status3Boolean =( status3value === "true")
+let status3Boolean =( status3value === "true")
 console.log (status3Boolean)
 if (status3Boolean ===true ){console.log (true)}
 else {console.log(false)}
@@ -102,11 +102,24 @@ let pancakes2Count = document.querySelector ('[data-key="order2"]  .pancakes  .c
 pancakes2Count.textContent= pancakes2Value
 console.log (pancakes2Count)
 
+const status2Update = document.querySelector('[data-key="order2"]   .status  dd')
+console.log (status2Update)
+if (status2Boolean===true){ status2Update.textContent = "Delivered" }
+else {status2Update.textContent = "Pending "}
 
-  pancakes3 = root2.pancakes
-  status3 = root2.status ? Delivered : Pending;
+let biscuits3Count = document.querySelector ('[data-key="order3"]  .biscuits  .count');
+ biscuits3Count.textContent = biscuits3Value;
 
-(biscuits3 = root3.biscuits),
-  (donuts3 = root3.donuts),
-  (pancakes3 = root3.pancakes),
-  (status3 = root3.status ? Delivered : Pending);
+ let donuts3Count = document.querySelector ('[data-key="order3"]  .donuts  .count');
+ donuts3Count.textContent = donuts3Value;
+
+ 
+let pancakes3Count = document.querySelector ('[data-key="order3"]  .pancakes  .count')
+pancakes3Count.textContent= pancakes3Value
+console.log (pancakes3Count)
+
+let status3Update = document.querySelector ('[ data-key="order3"]  .status dd')
+console.log (status3Update)
+//status3Update = "Delivered";
+if (status3Boolean===false){status3Update.textContent = "Delivered";}
+else {status3Update.textContent = "Pending"; }
