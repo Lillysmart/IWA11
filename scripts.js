@@ -89,10 +89,20 @@ console.log (status1Update)
   else{status1Update.textContent='Pending' }
 //status1 = root1.status ? Delivered : Pending;
 
-let biscuits2Count = document.querySelector('.biscuits  .count')
+let biscuits2Count = document.querySelector('[data-key="order2"]  .biscuits  .count')
 biscuits2Count.textContent = biscuits2Value
+console.log (biscuits2Count)
+  
+ let donuts2Count = document.querySelector ('[data-key="order2"]  .donuts .count');
+ donuts2Count.textContent= donuts2Value
+console.log(donuts1Count);
 
-  donuts3 = root2.donuts
+
+let pancakes2Count = document.querySelector ('[data-key="order2"]  .pancakes  .count')
+pancakes2Count.textContent= pancakes2Value
+console.log (pancakes2Count)
+
+
   pancakes3 = root2.pancakes
   status3 = root2.status ? Delivered : Pending;
 
